@@ -2,6 +2,7 @@ on: [pull_request,workflow_dispatch]
  
 jobs:
   hello_world_job:
+ 
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
@@ -39,6 +40,7 @@ jobs:
     - run: ls ${{github.workspace}}
 
   Test:
+    needs: hello_world_job
     runs-on: ubuntu-latest
     name: A job to say hello 1
     steps:
