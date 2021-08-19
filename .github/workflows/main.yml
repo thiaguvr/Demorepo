@@ -35,7 +35,7 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
        name: homework
-    - run: 7z ${{github.workspace}}/math-homework.txt homework.zip
+    - run: zip -r homework.zip
     - run: ls ${{github.workspace}}
 
   Test:
