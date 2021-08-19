@@ -36,7 +36,7 @@ jobs:
       with:
        name: homework
    
-    - run: echo  ${{github.workspace}}
+    - run: ls ${{github.workspace}}
 
   Test:
     runs-on: ubuntu-latest
