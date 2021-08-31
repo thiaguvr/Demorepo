@@ -21,6 +21,8 @@ public class InventoryService {
     private final ProductRepository productRepository;
 
     @Autowired
+    // exmaple
+    // always example
     public InventoryService(InventoryRepository inventoryRepository, ProductRepository productRepository) {
         this.inventoryRepository = inventoryRepository;
         this.productRepository = productRepository;
