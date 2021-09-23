@@ -7,7 +7,7 @@
 
 name: Snyk Scan
 
-on: [push,pull_request,workflow_dispatch]
+on: [workflow_dispatch]
    
 
 jobs:
@@ -23,12 +23,5 @@ jobs:
         with:
           
           command: monitor
-      - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: snyk.sarif
-      - uses: actions/upload-artifact@v2
-        with: 
-         name: homework
-         path: snyk.sarif
+      
 
