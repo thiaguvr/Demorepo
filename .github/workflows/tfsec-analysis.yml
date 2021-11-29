@@ -3,9 +3,9 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: tfsec
+name: tfsec_scan
 
-on:workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   tfsec:
