@@ -5,7 +5,7 @@
 
 name: tfsec
 
-on:[worflow_dispatch]  
+on:[workflow_dispatch]  
 
 jobs:
   tfsec:
