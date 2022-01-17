@@ -13,8 +13,8 @@ resource "aws_s3_bucket" "b1" {
 }
 
 resource "aws_s3_bucket" "b2" {
-  bucket = "binarylook-b2"
- # acl    = "public-read-write"
+ bucket = "binarylook-b2"
+ acl    = "public-read-write"
 
   tags = {
     Name        = "Public_@_Bucket"
