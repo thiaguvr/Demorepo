@@ -1,4 +1,4 @@
-name: Securin SL Scanning
+name: Securin SL SYSDIG
 on: [workflow_dispatch]
 jobs:
   build:
