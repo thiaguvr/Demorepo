@@ -1,0 +1,9 @@
+name: Securin SL Scanning
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu
+    steps:
+   uses: sysdiglabs/iac-scanner-action  
+with:  
+  parser: 'tf-file'  
