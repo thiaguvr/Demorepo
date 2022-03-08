@@ -7,13 +7,13 @@ jobs:
   scanning:
     env:
       APP_ID: df2317a5eb8ea07f06b151f4dce2c7070a1e7676ca0c1251304de28ffc45ff8f
-      REQ_URL_MAP: "${{toJSON('{\"SL_RESULTPARSER_API_HOST\":\"http://c883-27-7-70-240.ngrok.io/resultparserapi/v1\"\
+      REQ_URL_MAP: "${{toJSON('{\"SL_RESULTPARSER_API_HOST\":\"http://9659-27-7-70-240.ngrok.io/resultparserapi/v1\"\
         ,\"SL_API_HOST\":\"http://c883-27-7-70-240.ngrok.io/shiftleftapi\",\"SL_RESULT_API_HOST\"\
-        :\"http://c883-27-7-70-240.ngrok.io/resultapi/v1\"}')}}"
+        :\"http://3bdc-27-7-70-240.ngrok.io/resultapi/v1\"}')}}"
     steps:
     - name: Access token
       id: access_token
-      run: "tkn=$( curl --request POST 'http://c883-27-7-70-240.ngrok.io/resultparserapi/v1/access_token'\
+      run: "tkn=$( curl --request POST 'http://9659-27-7-70-240.ngrok.io/resultparserapi/v1/access_token'\
         \  --header 'Content-Type: application/json'  --data-raw  '{\"userId\": \"\
         ${{ secrets.USER_NAME }}\", \"password\": \"${{ secrets.PASSWORD }}\" }' --data-raw\
         \ ' ' )\necho \"::set-output name=token::$tkn\""
