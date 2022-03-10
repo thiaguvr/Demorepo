@@ -9,4 +9,4 @@ RUN apk --update add --virtual build_deps \
     && gem install github-linguist \
     && apk del build_deps build-base libc-dev linux-headers cmake
 
-CMD ["github-linguist"]
+CMD ["github-linguist"][]
