@@ -7,19 +7,19 @@ jobs:
   scanning:
     env:
       APP_ID: df2317a5eb8ea07f06b151f4dce2c7070a1e7676ca0c1251304de28ffc45ff8f
-      REQ_URL_MAP: "${{toJSON('{\"SL_RESULTPARSER_API_HOST\":\"http://9659-27-7-70-240.ngrok.io/resultparserapi/v1\"\
-        ,\"SL_API_HOST\":\"http://c883-27-7-70-240.ngrok.io/shiftleftapi\",\"SL_RESULT_API_HOST\"\
-        :\"http://3bdc-27-7-70-240.ngrok.io/resultapi/v1\"}')}}"
+      REQ_URL_MAP: "${{toJSON('{\"SL_API_HOST\":\"http://a313-27-4-251-8.ngrok.io/shiftleftapi\"\
+        ,\"SL_RESULTPARSER_API_HOST\":\"http://18dc-27-4-251-8.ngrok.io/resultparserapi/v1\"\
+        ,\"SL_RESULT_API_HOST\":\"http://1a28-27-4-251-8.ngrok.io/resultapi/v1\"}')}}"
     steps:
     - name: Access token
       id: access_token
-      run: "tkn=$( curl --request POST 'http://9659-27-7-70-240.ngrok.io/resultparserapi/v1/access_token'\
+      run: "tkn=$( curl --request POST 'http://18dc-27-4-251-8.ngrok.io/resultparserapi/v1/access_token'\
         \  --header 'Content-Type: application/json'  --data-raw  '{\"userId\": \"\
         ${{ secrets.USER_NAME }}\", \"password\": \"${{ secrets.PASSWORD }}\" }' --data-raw\
         \ ' ' )\necho \"::set-output name=token::$tkn\""
     - name: Retrieve Scan Info
       id: auth_token
-      run: "respJson=$(curl --location --request GET 'http://c883-27-7-70-240.ngrok.io/shiftleftapi/scan-info?app_id=${{\
+      run: "respJson=$(curl --location --request GET 'http://a313-27-4-251-8.ngrok.io/shiftleftapi/scan-info?app_id=${{\
         \ env.APP_ID }}'  --header 'Authorization: Bearer ${{fromJson(steps.access_token.outputs.token).access_token}}'\
         \  --data-raw ' ' )\necho \"::set-output name=authTokenJson::$respJson\""
     - uses: actions/checkout@v2
