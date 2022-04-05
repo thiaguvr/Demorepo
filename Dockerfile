@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.15.4
 WORKDIR /usr/workdir
 ENV NJSSCAN_VERSION=0.2.9
 
