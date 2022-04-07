@@ -8,8 +8,8 @@ jobs:
     env:
       APP_ID: df2317a5eb8ea07f06b151f4dce2c7070a1e7676ca0c1251304de28ffc45ff8f
       REQ_URL_MAP: "${{toJSON('{\"SL_RESULT_API_HOST\":\"http://e169-49-37-215-225.ngrok.io/resultapi/v1\"\
-        ,\"SL_API_HOST\":\"http://5831-49-37-215-225.ngrok.io/shiftleftapi\",\"SL_RESULTPARSER_API_HOST\"\
-        :\"http://7551-49-37-215-225.ngrok.io/resultparserapi/v1\"}')}}"
+        ,\"SL_RESULTPARSER_API_HOST\":\"http://7551-49-37-215-225.ngrok.io/resultparserapi/v1\"\
+        ,\"SL_API_HOST\":\"http://5831-49-37-215-225.ngrok.io/shiftleftapi\"}')}}"
     steps:
     - name: Retrieve Scan Info
       id: auth_token
